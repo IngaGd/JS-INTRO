@@ -2,12 +2,12 @@ console.clear();
 /*
     FUNCTION - pasikartojancions/perpanaudojamos logikos rinkinys/blokas
 
-    function pavadinimas (argumentai/parametrai){
+    function pavadinimas (argumentai/parametrai) {
         argumentu patikrinimas/validacija
-
+        logika, kuri pagamina rezultata
+        rezultato patikrinimas
+        grazinama reiksme
     }
-
-
 */
 
 function suma(a, b){
@@ -71,9 +71,8 @@ function listAverage(marks){
     sum += marks[index++];
     sum += marks[index++];
     sum += marks[index++];
-    sum += marks[index++];
 
-    console.log(sum);
+    console.log('suma', sum);
 
     return sum / count;
 }
