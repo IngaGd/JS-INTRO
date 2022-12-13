@@ -27,4 +27,14 @@ console.log(typeof []);
 console.log(typeof ['', true, 5]);
 console.log(typeof [1, -2]);
 
+console.log({}, typeof{});
+console.log({age: 55}, typeof{age: 55});
+
+console.log('----------------------');
+
+const x = '' + 5;
+console.log(typeof x);
+
+const y = typeof ('' + 5);
+console.log(y);
 
