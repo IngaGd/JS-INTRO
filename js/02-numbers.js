@@ -28,22 +28,22 @@ const du = 2;
 const antrasSkaicius = 3;
 const PVM = 21;
 
-const a = 5;
+const a = 5; // const - inicijavimo budas, kintamojo vardas "a", jo reiksme yra "5"
 const b = 8; 
 
-console.log('----------------------')
-console.log('primityvios matematines operacijos')
+console.log('----------------------');
+console.log('primityvios matematines operacijos');
 
 // primityvios matematines operacijos
 
 // suma
-console.log('suna:')
+console.log('suna:');
 const suma = a + b;
 console.log(a, b, suma);
 
 
 // skirtumas
-console.log('skirtumas')
+console.log('skirtumas');
 const skirtumas = a - b;
 console.log(a, b, skirtumas);
 
