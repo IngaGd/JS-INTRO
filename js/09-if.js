@@ -6,6 +6,9 @@ console.clear();
     visi: >, <, >=, <=, ==, !=, ===, !==
     naudotini: >, <, >=, <=, ===, !==
     NEnaudotini: ==, !=
+
+
+
     Sablonai:
     if () {}
     if () {} else {}
@@ -109,10 +112,91 @@ if (false == '') {
 
 const suma = Infinity;
 
-if (typeof suma === 'number') {
+if (typeof suma === 'number') { // jei tikriname lygybe, geriau visada rasyti tris, isvengsim kodo klaidu
     console.log('Darau pavedima ;)');
 } else {
     console.log('Jokio pavedimo nebus!!!!');
 }
 
 console.log('aaaaa' / 5);
+
+if (NaN === NaN) {
+    console.log('NAN lygus'); // dvi nesamones niekad nera tarpusavyje lygios:)
+} else {
+    console.log('NAN nelygus');
+}
+
+console.log(5 / 0);
+console.log(0 / 0); // nesamone
+console.log('hsgsg' / 5); // nesamone
+console.log('hsgsg' / 'jroa'); // nesamone
+
+// js kai vykdo logika, pirmiausia vykdo funkcijas, tada antru pravaziavimu is eiles viska nuskaito (likusia kodo dali)
+
+console.clear();
+console.log('CLEAR: 133');
+
+
+// code nesting
+
+const day = 8;
+
+if (day === 1) {
+    console.log('pirmadienis');
+} else {
+    if (day === 2) {
+        console.log('antradienis');
+    } else {
+        if (day === 3) {
+            console.log('treciadienis');
+    } else {
+        if (day === 4) {
+            console.log('ketvirtadienis');
+        } else {
+            if (day === 5) {
+                console.log('penktadienis');
+            } else {
+                    if (day === 6) {
+                        console.log('sestadienis');
+                    }  else {
+                        if (day === 7) {
+                            console.log('sekmadienis');
+                        }  else {
+                                console.log('tokia diena savaiteje neegzistuoja');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Atrakcionu parkas
+
+const parkasDirba = true;
+const bijauAukscio = false;
+
+if (parkasDirba) {
+    if (bijauAukscio) {
+        console.log ('Mamaaaaa!');
+    } else {
+        console.log('Einu i parka, bus smagu');
+    }    
+} else {
+    if (bijauAukscio){
+        console.log('Parkas nedirba - man pasiseke, liksiu sausom kelnem. :)');
+    } else {
+        console.log ('Parkas nedirba. Man liudna, nes norejau nueiti.');
+    }
+}
+
+if (parkasDirba && bijauAukscio) {
+    console.log ('Mamaaaaaa!');
+} else if (parkasDirba &&! bijauAukscio){
+    console.log('Einu i parka, bus smagu');
+} else if (!parkasDirba && bijauAukscio) {
+    console.log('Parkas nedirba - man pasiseke, liksiu sausom kelnem. :)');
+} else if (!parkasDirba && !bijauAukscio) {
+    console.log ('Parkas nedirba. Man liudna, nes norejau nueiti.');
+}
