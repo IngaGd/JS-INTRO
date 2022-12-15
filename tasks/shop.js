@@ -45,12 +45,12 @@ function shop(goods, currency){
 
     for (let i = 0; i < 3; i++) {
         pozicija = i + 1;
-        console.log(`${pozicija}) ${goods[i].name} kainuoja ${parseFloat(goods[i].price).toFixed(2)} ${currency} ir turime ju ${goods[i].inStock} vienetu`);
+        console.log(`${pozicija}) ${goods[i].name} kainuoja ${parseFloat(goods[i].price).toFixed(2)} ${currency} ir turime ju ${goods[i].inStock} vienetu.`);
     }
 
     console.log('----------------');
 
-    return console.log(`Viso asortimento kaina: ${parseFloat(sum).toFixed(2)} ${currency}`);
+    return console.log(`Viso asortimento kaina: ${parseFloat(sum).toFixed(2)} ${currency}.`);
 
 };
 
