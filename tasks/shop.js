@@ -28,29 +28,36 @@ const prekes = [
     },
 ];
 
-console.log('MUSU PARDUOTUVE:');
-console.log('----------------');
 
 function shop(goods, currency){
+
+    console.log('MUSU PARDUOTUVE:');
+    console.log('----------------');
 
     let sum = 0;
 
     for (let i = 0; i < 3; i++) {
-        sum += prekes[i].price * prekes[i].inStock;
+        sum += goods[i].price * goods[i].inStock;
     };
 
-    return sum;
-
-}
-
-let pozicija = 0;
+    let pozicija = 0;
 
 
+    for (let i = 0; i < 3; i++) {
+        pozicija = i + 1;
+        console.log(`${pozicija}) ${goods[i].name} kainuoja ${parseFloat(goods[i].price).toFixed(2)} ${currency} ir turime ju ${goods[i].inStock} vienetu`);
+    }
 
-for (let i = 0; i < 3; i++) {
-    pozicija = i + 1;
-    console.log(`${pozicija}) ${prekes[i].name} kainuoja ${parseFloat(prekes[i].price).toFixed(2)} EUR ir turime ju ${prekes[i].inStock} vienetu`);
-}
+    console.log('----------------');
 
-console.log('----------------');
-console.log('Viso asortimento kaina:', parseFloat(shop(prekes, valiuta)).toFixed(2));
+    return console.log(`Viso asortimento kaina: ${parseFloat(sum).toFixed(2)} ${currency}`);
+
+};
+
+
+shop(prekes, valiuta);
+
+
+
+
+
