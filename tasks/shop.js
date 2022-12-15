@@ -45,10 +45,12 @@ function shop(goods, currency){
 
 let pozicija = 0;
 
+
+
 for (let i = 0; i < 3; i++) {
     pozicija = i + 1;
-    console.log(`${pozicija}) ${prekes[i].name} kainuoja ${prekes[i].price} EUR ir turime ju ${prekes[i].inStock} vienetu`);
+    console.log(`${pozicija}) ${prekes[i].name} kainuoja ${parseFloat(prekes[i].price).toFixed(2)} EUR ir turime ju ${prekes[i].inStock} vienetu`);
 }
 
 console.log('----------------');
-console.log('Viso asortimento kaina:', shop(prekes, valiuta));
+console.log('Viso asortimento kaina:', parseFloat(shop(prekes, valiuta)).toFixed(2));
