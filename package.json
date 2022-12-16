@@ -16,7 +16,8 @@
     "labas": "nodemon ./js/01-labas.js",
     "rangeSum": "nodemon ./tasks/rangeSum.js",
     "shop": "nodemon ./tasks/shop.js",
-    "assignments": "nodemon ./js/assignments.js",
+    "tekstReverse": "nodemon ./jsMiniTasks/tekstReverse.js",
+    "assignments": "nodemon ./jsMiniTasks/assignments.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
