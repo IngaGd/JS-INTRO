@@ -18,6 +18,8 @@
     "strings": "nodemon ./js/03-strings",
     "numbers": "nodemon ./js/02-numbers",
     "labas": "nodemon ./js/01-labas.js",
+    "centuryFromYear": "nodemon ./codewars/06-centuryFromYear.js",
+    "fakeBinary": "nodemon ./codewars/05-fakeBinary.js",
     "listAverage": "nodemon ./codewars/04-listAverage.js",
     "sumOfPositive": "nodemon ./codewars/03-sumOfPositive.js",
     "banjo": "nodemon ./codewars/02-banjo.js",
