@@ -14,6 +14,7 @@
     "strings": "nodemon ./js/03-strings",
     "numbers": "nodemon ./js/02-numbers",
     "labas": "nodemon ./js/01-labas.js",
+    "sumOfPositive": "nodemon ./codewars/03-sumOfPositive.js",
     "banjo": "nodemon ./codewars/02-banjo.js",
     "summation": "nodemon ./codewars/01-summation.js",
     "biggestNumber": "nodemon ./tasks/biggestNumber.js",
