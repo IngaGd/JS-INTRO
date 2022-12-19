@@ -15,6 +15,7 @@
     "numbers": "nodemon ./js/02-numbers",
     "labas": "nodemon ./js/01-labas.js",
     "summation": "nodemon ./codewars/01-summation.js",
+    "reverseString": "nodemon ./tasks/reverseString.js",
     "rangeSum": "nodemon ./tasks/rangeSum.js",
     "shop": "nodemon ./tasks/shop.js",
     "tekstReverse": "nodemon ./jsMiniTasks/tekstReverse.js",
