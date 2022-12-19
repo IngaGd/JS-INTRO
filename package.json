@@ -16,6 +16,7 @@
     "labas": "nodemon ./js/01-labas.js",
     "banjo": "nodemon ./codewars/02-banjo.js",
     "summation": "nodemon ./codewars/01-summation.js",
+    "digitCount": "nodemon ./tasks/digitCount.js",
     "rangeDivide": "nodemon ./tasks/rangeDivide.js",
     "reverseString": "nodemon ./tasks/reverseString.js",
     "rangeSum": "nodemon ./tasks/rangeSum.js",
