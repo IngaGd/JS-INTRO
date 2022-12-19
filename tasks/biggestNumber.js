@@ -11,23 +11,17 @@ function biggestNumber(list) {
         return 'ERROR: masyvas negali buti tuscias.';
     }
 
-    for (let i = 0; i < list.length; i++) {
+    let max = -Infinity;
 
-        if ((list[i] === Infinity) || (list[i] === NaN)) {
-            list[i] = 0;
+    for (let i = 0; i < list.length; i++) {
+        const number = list[i];
+        if (typeof number === 'number' && isFinite(number) && number > max) {
+            max = number;
         }
     }
 
-    let max = list[0];
-
-    for (let i = 1; i < list.length; i++) {
-    
-        const number = list[i];
-    
-            if (number > max) {
-                    max = number;
-                
-        }
+    if (max === -Infinity) {
+        return 'ERROR: sarase nera nei vieno normalaus skaiciaus.';
     }
 
     return max;
@@ -58,7 +52,7 @@ console.log(biggestNumber([1, 2, NaN, 3]), '-->', 3);
 console.log(biggestNumber([1, NaN, 2, 3]), '-->', 3);
 console.log(biggestNumber([NaN, 1, 2, 3]), '-->', 3);
 
-/*console.log(biggestNumber([1, 2, 3, true]), '-->', 3);
+console.log(biggestNumber([1, 2, 3, true]), '-->', 3);
 console.log(biggestNumber([1, 2, true, 3]), '-->', 3);
 console.log(biggestNumber([1, true, 2, 3]), '-->', 3);
 console.log(biggestNumber([true, 0, -1, -2]), '-->', 0);
@@ -69,4 +63,4 @@ console.log(biggestNumber([1, 'true', 2, 3]), '-->', 3);
 console.log(biggestNumber(['true', 0, -1, -2]), '-->', 0);
 
 console.log(biggestNumber(['true', true, NaN, [], [5], Infinity, -Infinity, 0]), '-->', 0);
-console.log(biggestNumber(['true', true, NaN, [], [5], Infinity, -Infinity]));*/
+console.log(biggestNumber(['true', true, NaN, [], [5], Infinity, -Infinity]));
