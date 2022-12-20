@@ -18,6 +18,7 @@
     "strings": "nodemon ./js/03-strings",
     "numbers": "nodemon ./js/02-numbers",
     "labas": "nodemon ./js/01-labas.js",
+    "arraySum": "nodemon ./codewars/07-arraySum",
     "centuryFromYear": "nodemon ./codewars/06-centuryFromYear.js",
     "fakeBinary": "nodemon ./codewars/05-fakeBinary.js",
     "listAverage": "nodemon ./codewars/04-listAverage.js",
