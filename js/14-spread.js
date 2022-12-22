@@ -16,6 +16,7 @@ const [first, second] = marks; // ima masyvo reiksmes is eles nuo 0-ines reiksme
 
 console.log(first);
 console.log(second);
+console.log('marks:', marks);
 console.log('----');
 
 const petras = ['Petras', 99, true];
@@ -50,6 +51,7 @@ console.log(numbers3);
 console.log(numbers4);
 
 // analogiskai veikia su objektais
+// SPREAD - israsymas/iskopijavimas
 
 const person = {
     name: 'Maryte',
@@ -78,4 +80,40 @@ console.log(person2.car.brand);
 
 const { childrenCount, happy, favoriteColor } = person2;
 console.log(childrenCount, happy, favoriteColor);
+
+console.clear();
+
+const a = ['a', 'ab'];
+const b = ['b', 'bb'];
+const c = ['c', 'cc'];
+
+const doubleABC = [...a, ...b, ...c];
+const doubleCBA = [...c, ...b, 222, ...a];
+console.log(doubleABC);
+console.log(doubleCBA);
+
+const oa = { a: 'a', aa: 'aa' };
+const ob = { b: 'b', bb: 'bb' };
+const oc = { c: 'c', cc: 'cc' };
+
+const oABC1 = {...oa, ...ob, ...oc };
+const oABC = { ...oa, ...oc, gg: 'gg', ...ob, cc: 'nebe CC' }; // itrauktos papildomai reiksmes 'gg' ir cc reiksme pakeista i 'nebe cc', 
+//objetktas negali tureti dvieju vienmodu raktazodziu, laimi paskutinis:
+const oABC2 = { ...oa, ...oc, gg: 'gg', ...ob, cc: 'nebe CC', cc: 'nebe CCCC' };
+
+console.log('oABC1:', oABC1);
+console.log('oABC:', oABC);
+console.log('oABC2:', oABC2);
+console.log('oABC.cc:', oABC.cc); // paima tik objekto reiksme cc
+console.log('oABC.gg:', oABC.gg); // paima tik objekto reiksme gg
+
+const user = {
+    name: 'Username',
+    password: 'pasword12',
+};
+console.log('user:', user);
+
+const user2 = { ...user, name: 'Petras' }; // ...user - padaroma objekto user kopija, username oweridintas su vardu Petras
+console.log('user2:', user2);
+console.log(user2.name); // istraukiama reksme is objekto
 
