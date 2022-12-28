@@ -30,6 +30,7 @@ const jonas = new Student('Jonas', 1990);
 // const petras = new Studentas('Petras', 2000); 
 // const maryte = new Studentas('Marte', 1980); 
 
+petras.addMarks(10, 0, 2, 22);
 petras.addMark(10);
 petras.addMark(3.14);
 petras.addMark(0);
@@ -38,15 +39,19 @@ petras.addMark(8);
 petras.addMark(4);
 petras.addMark(6);
 
-maryte.addMark(9);
-maryte.addMark(6);
+// maryte.addMark(9);
+// maryte.addMark(6);
 
-console.log(petras.name, petras.marks);
-console.log(maryte.name, maryte.marks);
+// console.log(petras.name, petras.marks);
+// console.log(maryte.name, maryte.marks);
 
+console.log(petras.name);
+console.log('addMarks metodas: ', petras.marks);
 console.log(petras.name, petras.marksAverage());
-console.log(maryte.name, maryte.marksAverage());
-console.log(jonas.name, jonas.marksAverage());
+// console.log(maryte.name, maryte.marksAverage());
+// console.log(jonas.name, jonas.marksAverage());
+
+console.log(petras.name, petras.marksAverage1());
 
 
 // console.log(petras);
