@@ -11,31 +11,32 @@ Example
 For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 */
 
+console.clear();
+
 function countPositivesSumNegatives(input) {
 
-    let sumOfNegatives = 0;
-    let countPositives = 0;
+    if ((input[0] === null) || (input.length === 0) || (input.length === 1 && input[0] === 0)) {
+        return [];
+    }
+
     let result = [];
+    let positiveNumbers = [];
+    let negativeNumbers = [];
+    let countPositives = 0;
+    let sumOfNegatives = 0;
 
-    
-        for (let i = 0; i < input.length; i++){
+    positiveNumbers = input.filter(n => n > 0);
+    countPositives = positiveNumbers.length;
 
-            if (input[i] === 0) {
-                continue;
-            }
-            if (input[i] > 0) {
-                countPositives = input[i]++;
-                result[0] = countPositives;
-            } 
-            if (input[i] < 0) {
-                sumOfNegatives += input[i];
-                result[1] = sumOfNegatives;
-            }
-            if ((input === []) || (input === null)) {
-                    return [];
-        
-            }
-        }
+    result[0] = countPositives;
+
+    negativeNumbers = input.filter(n => n < 0);
+
+    for (const negativeNumber of negativeNumbers) {
+        sumOfNegatives += negativeNumber;
+        result[1] = sumOfNegatives;
+    }
+
 
     return result;
 

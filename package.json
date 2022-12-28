@@ -26,6 +26,7 @@
     "strings": "nodemon ./js/03-strings",
     "numbers": "nodemon ./js/02-numbers",
     "labas": "nodemon ./js/01-labas.js",
+    "arrayS": "nodemon ./codewars/10-arraySum.js",
     "vowelRemover": "nodemon ./codewars/08-vowelRemover.js",
     "arraySum": "nodemon ./codewars/07-arraySum",
     "centuryFromYear": "nodemon ./codewars/06-centuryFromYear.js",
