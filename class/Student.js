@@ -11,7 +11,7 @@ class Student { // klase yra receptura, arba instrikciju rinkinys
     // pirma gynybos linija yra pushinant pazhymius, neturi patekti neteusingi
 
     //surasome pasikartojancias logikas
-    isValidMark(mark) {
+    isValidMark(msark) {
         if (typeof mark !== 'number'
             || !isFinite(mark) 
             || mark < 1
@@ -127,4 +127,6 @@ class Math {
 // export {Student, Teacher, Math}; eksportuoja konkrecia klase su konkreciu pavadinimu
 
 export {Student};
+
+// "This" reiskia objekta, su kuriuo tuo metu dirbi.
 
