@@ -4,7 +4,11 @@ class Shop2 {
         this.currency = valiuta;
         this.name = [];
         this.price = [];
+        this.productAndPrices = [];
         this.customer = [];
+        this.cart = [];
+        this.orders = {};
+        this.item = [];
     }
 
     intro(){
@@ -20,7 +24,7 @@ class Shop2 {
 
         console.log(`"${this.company}" sells ${names} for ${parseFloat(prices/100).toFixed(2)} ${this.currency} now!`);
     }
-
+    
     items() {
         let itemNo = 0;
         console.log(`\nItems for sale at "${this.company}":\n====================`);
@@ -39,12 +43,39 @@ class Shop2 {
         console.log(`"${this.company}" updated price and sells ${names} for ${parseFloat(otherPrice/100).toFixed(2)} ${this.currency} now!`);
     }
 
-    createCart(customers) {
-        this.customer.push(customers);
+    createCart(owner) {
+        this.cart.push(owner);
 
-        console.log(`"${customers}" have an open cart at "${this.company}"!`);
+        console.log(`"${owner}" have an open cart at "${this.company}"!`);
     }
 
+    addItemToCart(owner, id, count){
+       /*
+       if (!this.orders[owner]) {
+            this.orders[owner] = [];
+        }
+
+        this.orders[owner].push({ id, count });*/
+
+        this.item.push(
+            { owner: owner,
+            items: [
+                {
+                    id: id, count: count, 
+                } 
+            ]
+
+            }
+        )
+    }
+
+    order(owner) {
+        return console.log({
+            owner,
+            items: this.item,
+          });
+        }
 }
+        
 
 export { Shop2 };
