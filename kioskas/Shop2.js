@@ -5,9 +5,7 @@ class Shop2 {
         this.name = [];
         this.price = [];
         this.productAndPrices = [];
-        this.customer = [];
         this.cart = [];
-        this.orders = {};
         this.item = [];
     }
 
@@ -18,9 +16,10 @@ class Shop2 {
     }
 
     addItem(names, prices) {
-        // let newName = imone.toLowercase;
-        this.name.push(names);
-        this.price.push(prices);
+        this.productAndPrices.push({
+            names: names,
+            prices: prices,
+        })
 
         console.log(`"${this.company}" sells ${names} for ${parseFloat(prices/100).toFixed(2)} ${this.currency} now!`);
     }
@@ -34,7 +33,6 @@ class Shop2 {
             console.log(
             `${itemNo}) ${this.name[i]} - ${parseFloat(this.price[i]).toFixed(2)} ${this.currency};`);
         }
-        console.log(`====================`);
     }
 
     updatePrice(names, otherPrice) {
@@ -44,38 +42,38 @@ class Shop2 {
     }
 
     createCart(owner) {
-        this.cart.push(owner);
+        this.cart.push({
+            owner: owner,
+            items: []
+        })
 
         console.log(`"${owner}" have an open cart at "${this.company}"!`);
     }
+    
+    addItemToCart(customer, itemNo, quantity) {
 
-    addItemToCart(owner, id, count){
-       /*
-       if (!this.orders[owner]) {
-            this.orders[owner] = [];
-        }
-
-        this.orders[owner].push({ id, count });*/
-
-        this.item.push(
-            { owner: owner,
-            items: [
-                {
-                    id: id, count: count, 
-                } 
-            ]
-
-            }
-        )
+        for (const {owner, items} of this.cart) {
+            if (customer === owner) {
+                items.push({
+                    id: itemNo, 
+                    count: quantity,
+                });
+                return this.cart;
+            } 
+        }    
     }
+     order(customer){
 
-    order(owner) {
-        return console.log({
-            owner,
-            items: this.item,
-          });
+        for (const {owner, items} of this.cart) {
+            if (customer === owner) {
+                return {owner, items};
+            }
         }
+     }
+        
 }
+
+
         
 
 export { Shop2 };

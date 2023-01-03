@@ -54,11 +54,10 @@ onlineKioskas.addItemToCart('Barbora', 1, 2);
 onlineKioskas.addItemToCart('Barbora', 3, 1);
 onlineKioskas.addItemToCart('Barbora', 5, 1);
 
-console.log(onlineKioskas.item)
 
 onlineKioskas.order('Augustas');
 
-//console.log(onlineKioskas.order('Barbora'));
+console.log(onlineKioskas.order('Barbora'));
 /*
 {
     owner: 'Augustas',
@@ -70,7 +69,7 @@ onlineKioskas.order('Augustas');
 }
 */
 
-onlineKioskas.order('Barbora');
+//onlineKioskas.order('Barbora');
 /*
 {
     owner: 'Barbora',
